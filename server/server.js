@@ -5,7 +5,7 @@ const express = require("express")
 const bodyParser = require('body-parser')
 const cors = require("cors")
 const db = require("./db/db")
-const gameRouter = require('./route/game-router')
+const exampleRouter = require('./route/example-router')
 
 
 const app = express()
@@ -22,6 +22,6 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.use('/api', gameRouter)
+app.use('/api', exampleRouter)
  
 app.listen(port, () => console.log(`Server running on port ${port}`))

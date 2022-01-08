@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const cors = require("cors")
 const db = require("./db/db")
 const exampleRouter = require('./route/example-router')
+const gameRouter = require('./route/game-router')
 
 
 const app = express()
@@ -23,5 +24,6 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api', exampleRouter)
+app.use('/api', gameRouter)
  
 app.listen(port, () => console.log(`Server running on port ${port}`))

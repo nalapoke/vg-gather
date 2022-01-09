@@ -1,4 +1,4 @@
-export default function GameDetail() {
+export default function Home() {
   return (
     <div>
       <h3>~~~ Home page ~~~</h3>

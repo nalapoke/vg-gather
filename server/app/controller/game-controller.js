@@ -41,12 +41,11 @@ getGameById = async (req, res) => {
       .where(`id = ${req.params.id}`)
       .request('/games')
 
-    console.log(result.data)
     if (!result.data || result.data.length == 0) {
       return res.status(404).json({ success: false, error: "Game not found for id" })
     }
 
-    res.status(200).json({ success: true, data: result.data })
+    res.status(200).json({ success: true, data: result.data[0] })
 
   } catch (err) {
     console.error(err)

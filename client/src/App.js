@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
  
-import GameDetail from "./components/gameDetail";
-import Home from "./components/home";
+import GameDetail from "./components/GameDetail";
+import Home from "./components/Home";
  
 const App = () => {
  return (

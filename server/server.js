@@ -4,9 +4,9 @@ dotenv.config()
 const express = require("express")
 const bodyParser = require('body-parser')
 const cors = require("cors")
-const db = require("./db/db")
-const exampleRouter = require('./route/example-router')
-const gameRouter = require('./route/game-router')
+const db = require("./app/db/db")
+const exampleRouter = require('./app/route/example-router')
+const gameRouter = require('./app/route/game-router')
 
 
 const app = express()

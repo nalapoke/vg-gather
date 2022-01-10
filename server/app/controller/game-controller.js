@@ -37,7 +37,7 @@ getGameById = async (req, res) => {
     const client = igdb(clientId, accessToken)
 
     const result = await client
-      .fields(['name', 'summary', 'platforms.name', 'release_dates.human', 'screenshots.url'])
+      .fields(['name', 'summary', 'platforms.name', 'release_dates.human', 'cover.url', 'screenshots.url'])
       .where(`id = ${req.params.id}`)
       .request('/games')
 
